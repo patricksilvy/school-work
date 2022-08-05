@@ -9,6 +9,168 @@
 </head>
 <body>
     <iframe src="./system/system.html" frameborder="0" id="myIframe"></iframe>
-    <h1>3D Solar System <span>by <a href="https://twitter.com/JulianGarnier"target="_blank">@JulianGarnier</a></span></h1>
+    <div class="dedication">
+        <h1>3D Solar System <span>by <a href="https://twitter.com/JulianGarnier"target="_blank">@JulianGarnier</a></span></h1>
+    </div>
+    <div class="informs">
+
+        <div class="sun-informs star-informs">
+            <img src="./assets/img/sol.png" class="img"/>
+            <div class="text">
+                <h1>Sol</h1>
+                <p>
+                    O Sol é uma estrela que tem 1 392 700 Km, ou seja, é 109 mil vezes maior do que a Terra. 
+                    Mas, apesar de ser muito maior do que a Terra, em comparação com outras estrelas, esse astro não é assim tão grande. 
+                    O Sol contém quase que a totalidade da massa do sistema solar, cerca de 99,8%. É em virtude da sua massa que os planetas orbitam à sua volta.
+                </p>
+            </div>
+        </div>
+
+        <div class="mercury-informs star-informs">
+            <img src="./assets/img/mercurio.png" class="img"/>
+            <div class="text">
+                <h1>Mercúrio</h1>
+                <p>
+                    Mercúrio é o planeta mais próximo ao Sol e o oitavo em tamanho no sistema solar. A distância média é de 57,9 milhões de quilômetros do Sol.                    Mas, apesar de ser muito maior do que a Terra, em comparação com outras estrelas, esse astro não é assim tão grande. 
+                    É o planeta mais rápido do Sistema Solar, perfazendo 47,87 quilômetros por segundo ao redor do Sol. A superfície é semelhante à da Lua, rochosa e com diversas crateras.
+                </p>
+            </div>
+        </div>
+
+        <div class="venus-informs star-informs">
+            <img src="./assets/img/venus.png" class="img"/>
+            <div class="text">
+                <h1>Vênus</h1>
+                <p>
+                    Vênus é o segundo planeta do sistema Solar mais próximo do Sol. Tem cerca de 800 milhões de anos e além do Sol e da Lua é o corpo celeste mais brilhante no céu, motivo pelo qual é conhecido desde a antiguidade.                    
+                    Mas, apesar de ser muito maior do que a Terra, em comparação com outras estrelas, esse astro não é assim tão grande. 
+                    A rotação de Vênus ocorre de leste para oeste, contrária a todos os planetas do Sistema Solar.
+                    É o planeta mais quente, apesar de não ser o mais próximo do Sol.
+                </p>
+            </div>
+        </div>
+
+        <div class="earth-informs star-informs">
+            <img src="./assets/img/terra.png" class="img" style="object-fit: cover"/>
+            <div class="text">
+                <h1>Terra</h1>
+                <p>
+                    O Planeta Terra é o terceiro dos oito planetas que fazem parte do Sistema Solar.
+                    Também chamado de "Planeta Azul", recebe essa denominação posto que grande parte do planeta é formado por água.       
+                    É o único planeta do Sistema Solar em que existe água em estado líquido, característica que junto ao oxigênio e a temperatura média de 14ºC tornam possível a vida no planeta.                
+                </p>
+            </div>
+        </div>
+        <div class="mars-informs star-informs">
+            <img src="./assets/img/marte.png" class="img"/>
+            <div class="text">
+                <h1>Marte</h1>
+                <p>
+                    Marte é o quarto planeta mais próximo do Sol e o segundo menor planeta do sistema solar, depois de Mercúrio, sendo consideravelmente menor que o planeta Terra.
+                    Marte é um dos planetas mais estudados do sistema solar. Podendo ser visto da Terra a olho nu, ou seja, sem auxílio de um telescópio.
+                </p>
+            </div>
+        </div>
+
+        <div class="jupiter-informs star-informs">
+            <img src="./assets/img/jupiter.png" class="img" style="object-fit: cover"/>
+            <div class="text">
+                <h1>Júpiter</h1>
+                <p>
+                    Júpiter é o maior planeta do Sistema Solar, o quinto a partir do Sol e o quarto corpo celeste mais brilhante no céu.
+                    É composto principalmente de hidrogênio, sendo um quarto de sua massa composta de hélio, embora o hélio corresponda a apenas um décimo do número total de moléculas.
+                </p>
+            </div>
+        </div>
+
+        <div class="saturn-informs star-informs">
+            <img src="./assets/img/saturno.png" class="img" style="object-fit: cover"/>
+            <div class="text">
+                <h1>Saturno</h1>
+                <p>
+                    Saturno é o sexto planeta a partir do Sol, e o segundo maior do sistema solar.
+                    Por ser um planeta gasoso, é composto principalmente por hidrogênio e hélio. Ou seja, não há superfície sólida.
+                </p>
+            </div>
+        </div>
+
+        <div class="uranus-informs star-informs">
+            <img src="./assets/img/urano.png" class="img" style="object-fit: cover"/>
+            <div class="text">
+                <h1>Urano</h1>
+                <p>
+                    Urano é o sétimo planeta a partir do Sol, o terceiro maior do Sistema Solar e foi o primeiro a ser encontrado por meio de um telescópio, pelo astrônomo William Herschel em 1781.
+                </p>
+            </div>
+        </div>
+
+        <div class="neptune-informs star-informs">
+            <img src="./assets/img/netuno.png" class="img" style="object-fit: cover"/>
+            <div class="text">
+                <h1>Netuno</h1>
+                <p>
+                    Netuno é o oitavo planeta a partir do Sol. É um gigante gasoso, bem como Júpiter, Saturno e Urano.
+                    Somente em 1984, astrônomos encontraram evidências da existência do sistema de anéis em torno de Netuno.
+                    O conjunto é formado por três anéis proeminentes, denominados Liberdade, Igualdade e Fraternidade.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script>
+
+        $('#myIframe').load(function(){
+            var iframe = $('#myIframe').contents();
+
+            $('.star-informs').hide()
+            $('.earth-informs').show() 
+
+            iframe.find(".sun").click(function(){
+                $('.star-informs').hide()
+                $('.sun-informs').show() 
+            });
+
+            iframe.find(".mercury").click(function(){
+                $('.star-informs').hide()
+                $('.mercury-informs').show() 
+            });
+
+            iframe.find(".venus").click(function(){
+                $('.star-informs').hide()
+                $('.venus-informs').show() 
+            });
+
+            iframe.find(".earth").click(function(){
+                $('.star-informs').hide()
+                $('.earth-informs').show() 
+            });
+
+            iframe.find(".mars").click(function(){
+                $('.star-informs').hide()
+                $('.mars-informs').show() 
+            });
+
+            iframe.find(".jupiter").click(function(){
+                $('.star-informs').hide()
+                $('.jupiter-informs').show() 
+            });
+
+            iframe.find(".saturn").click(function(){
+                $('.star-informs').hide()
+                $('.saturn-informs').show() 
+            });
+
+            iframe.find(".uranus").click(function(){
+                $('.star-informs').hide()
+                $('.uranus-informs').show() 
+            });
+
+            iframe.find(".neptune").click(function(){
+                $('.star-informs').hide()
+                $('.neptune-informs').show()
+            });
+        });
+    </script>
 </body>
 </html>
